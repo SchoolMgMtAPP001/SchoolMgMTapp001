@@ -169,26 +169,26 @@ class Menu extends Component
                     ],
                 ],
             ],
-            [
-                'type'    => 'menu-item',
-                'text'    => 'Account Applications',
-                'icon'    => 'fas fa-plus',
-                'can'     => 'menu-account-application',
-                'submenu' => [
-                    [
-                        'type'  => 'menu-item',
-                        'text'  => 'View account applications',
-                        'route' => 'account-applications.index',
-                        'can'   => 'read applicant',
-                    ],
-                    [
-                        'type'  => 'menu-item',
-                        'text'  => 'View rejected applications',
-                        'route' => 'account-applications.rejected-applications',
-                        'can'   => 'read applicant',
-                    ],
-                ],
-            ],
+            // [
+            //     'type'    => 'menu-item',
+            //     'text'    => 'Account Applications',
+            //     'icon'    => 'fas fa-plus',
+            //     'can'     => 'menu-account-application',
+            //     'submenu' => [
+            //         [
+            //             'type'  => 'menu-item',
+            //             'text'  => 'View account applications',
+            //             'route' => 'account-applications.index',
+            //             'can'   => 'read applicant',
+            //         ],
+            //         [
+            //             'type'  => 'menu-item',
+            //             'text'  => 'View rejected applications',
+            //             'route' => 'account-applications.rejected-applications',
+            //             'can'   => 'read applicant',
+            //         ],
+            //     ],
+            // ],
             [
                 'type'    => 'menu-item',
                 'text'    => 'Teachers',
