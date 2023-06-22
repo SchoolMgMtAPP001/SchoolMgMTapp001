@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class FeeCategory extends Model
+class FeeCategoryTwo extends Model
 {
     use InSchool;
     use HasFactory;
@@ -28,16 +28,11 @@ class FeeCategory extends Model
 
     /**
      * Get all of the fees for the FeeCategory.
-     *s
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function fees(): HasMany
     {
         return $this->hasMany(Fee::class);
-    }
-
-    public function feePayment(): HasMany
-    {
-        return $this->hasMany(FeePayment::class);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route; 
 
 /*
 |--------------------------------------------------------------------------
@@ -86,6 +86,8 @@ Route::middleware('auth:sanctum', 'verified', 'App\Http\Middleware\PreventLockAc
             Route::middleware(['App\Http\Middleware\EnsureSemesterIsSet'])->group(function () {
                 //fee categories routes
                 Route::resource('fees/fee-categories', FeeCategoryController::class);
+                Route::resource('fees/fee-categories-two', FeeCategorytwoController::class);
+                Route::resource('fees/fee-payment', FeePaymentController::class);
 
                 //fee invoice record routes
                 Route::post('fees/fee-invoices/fee-invoice-records/{fee_invoice_record}/pay', ['App\Http\Controllers\FeeInvoiceRecordController', 'pay'])->name('fee-invoices-records.pay');
@@ -148,6 +150,13 @@ Route::middleware('auth:sanctum', 'verified', 'App\Http\Middleware\PreventLockAc
         //student routes
         Route::resource('students', StudentController::class);
         Route::get('students/{student}/print', ['App\Http\Controllers\StudentController', 'printProfile'])->name('students.print-profile')->withoutMiddleware(['App\Http\Middleware\PreventGraduatedStudent']);
+
+        //Vehical routes
+        Route::resource('vehical', VehicalController::class);
+        // Route::get('/vehicles', [VehicalController::class, 'index'])->name('vehical.index');
+        // Route::get('/vehicles/create', [VehicalController::class, 'create'])->name('vehical.create');
+        // Route::post('/vehicles', [VehicalController::class, 'store'])->name('vehical.store');
+
 
         //admin routes
         Route::resource('admins', AdminController::class);

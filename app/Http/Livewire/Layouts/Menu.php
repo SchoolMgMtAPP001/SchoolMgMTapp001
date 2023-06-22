@@ -151,6 +151,26 @@ class Menu extends Component
             ],
             [
                 'type'    => 'menu-item',
+                'text'    => 'Vehicle',
+                'icon'    => 'fas fa-car',
+                'can'     => 'menu-vehicle',
+                'submenu' => [
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'View vehicle Details',
+                        'route' => 'vehical.index',
+                        'can'   => 'read vehicle Details',
+                    ],
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'Create vehicle Details',
+                        'route' => 'vehical.create',
+                        'can'   => 'create vehicle Details',
+                    ],
+                ],
+            ],
+            [
+                'type'    => 'menu-item',
                 'text'    => 'Account Applications',
                 'icon'    => 'fas fa-plus',
                 'can'     => 'menu-account-application',
@@ -310,6 +330,18 @@ class Menu extends Component
                         'text'  => 'Create Fee Category',
                         'route' => 'fee-categories.create',
                         'can'   => 'create fee category',
+                    ],
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'Create Fee Payment',
+                        'route' => 'fee-payment.create',
+                        'can'   => 'create fee payment',
+                    ],
+                    [
+                        'type'  => 'menu-item',
+                        'text'  => 'View Fee Payment',
+                        'route' => 'fee-payment.index',
+                        'can'   => 'read fee payment',
                     ],
                 ],
             ],
